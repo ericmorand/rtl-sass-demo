@@ -1,0 +1,32 @@
+@import "../../../demo/index";
+@import "../../../../../node_modules/rtl-sass/src/api";
+
+$border: solid 10px black;
+
+.demo-background-color {
+  .demo-body & {
+    .block {
+      width: 200px;
+      height: 200px;
+      max-width: 50%;
+
+      @include rtl-sass-declaration(float, left, right);
+
+      &.first {
+        @include rtl-sass-declaration(background-color, #7F1813, #3118F7);
+      }
+
+      &.second {
+        @include rtl-sass-declaration(background-color, #B24109, #90142B);
+      }
+
+      &.third {
+        @include rtl-sass-declaration(background-color, #388C3F, #F3C883);
+      }
+
+      &.fourth {
+        @include rtl-sass-declaration(background-color, #E5A17F, #F71A5E);
+      }
+    }
+  }
+}

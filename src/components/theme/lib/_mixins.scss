@@ -1,0 +1,15 @@
+@mixin primary-font($style: normal, $weight: 400) {
+  font-family: 'Primary', sans-serif;
+  font-weight: $weight;
+  font-style: $style;
+
+  [lang="ar"] &, [lang="he"] & {
+    font-family: 'PrimaryArabic', sans-serif;
+  }
+}
+
+@mixin clear-float() {
+  content: "";
+  display: block;
+  clear: both;
+}

@@ -1,0 +1,47 @@
+@import "../theme/lib/mixins";
+@import "../../../node_modules/rtl-sass/src/positioning";
+
+.demo-body {
+  @include primary-font();
+
+  h1, h2, h3 {
+    margin: 0;
+  }
+
+  h2 {
+    border: none;
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+
+  .demo-content {
+    margin-bottom: 20px;
+    border: solid 3px #f7f7f9;
+    padding: 20px;
+
+    &:after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+
+    .block {
+      &.first {
+        background-color: #7F1813;
+      }
+
+      &.second {
+        background-color: #B24109;
+      }
+
+      &.third {
+        clear: both;
+        background-color: #E5A17F;
+      }
+
+      &.fourth {
+        background-color: #388C3F;
+      }
+    }
+  }
+}

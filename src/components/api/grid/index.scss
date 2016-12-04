@@ -1,0 +1,37 @@
+@import "../../../../node_modules/rtl-sass/src/positioning";
+@import "../../../../node_modules/rtl-sass/src/margin";
+@import "../../../../node_modules/breakpoint-sass/stylesheets/breakpoint";
+
+$gridSize: 9;
+
+@function grid-col-width() {
+  @return percentage(1/$gridSize);
+}
+
+@mixin grid-col() {
+  display: block;
+  box-sizing: border-box;
+  width: grid-col-width();
+
+  @include rtl-sass-float(left);
+
+  @include breakpoint(max-width 1280px) {
+    width: grid-col-width() * ($gridSize / 3);
+  }
+
+  @include breakpoint(max-width 768px) {
+    width: grid-col-width() * ($gridSize / 2);
+  }
+
+  @include breakpoint(max-width 480px) {
+    width: grid-col-width() * $gridSize;
+  }
+}
+
+.grid {
+  &:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}

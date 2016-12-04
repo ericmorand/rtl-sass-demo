@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alignment</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div id="app">
+    <demo title="Alignment" v-bind:languages="{{ languages|json_encode|escape }}">
+        <div slot="content" class="demo-content demo-alignment">
+            <div class="block first">
+                <span>Lorem ipsum dolor sit amet</span>
+            </div>
+            <div class="block second">
+                <span>Lorem ipsum dolor sit amet</span>
+            </div>
+            <div class="block third">
+                <span>Lorem ipsum dolor sit amet</span>
+            </div>
+        </div>
+    </demo>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

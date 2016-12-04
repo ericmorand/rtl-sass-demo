@@ -1,0 +1,34 @@
+@import "../demo/index";
+@import "../../../node_modules/rtl-sass/src/positioning";
+@import "../../../node_modules/rtl-sass/src/alignment";
+
+.demo-alignment {
+  .demo-body & {
+    .block {
+      width: 100%;
+      height: 200px;
+      padding: 1.0em;
+      clear: none;
+      @include rtl-sass-float(none);
+      color: #efefef;
+      font-size: 1.0em;
+      box-sizing: border-box;
+
+      @include breakpoint(min-width 480px) {
+        font-size: 2.0em;
+      }
+
+      &.first {
+         @include rtl-sass-text-align(left);
+      }
+
+      &.second {
+        @include rtl-sass-text-align(center);
+      }
+
+      &.third {
+        @include rtl-sass-text-align(right);
+      }
+    }
+  }
+}

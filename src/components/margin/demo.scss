@@ -1,0 +1,41 @@
+@import "../demo/index";
+@import "../../../node_modules/rtl-sass/src/margin";
+
+$margin: 100px;
+
+.demo-margin {
+  .block {
+    max-width: 50%;
+    @include rtl-sass-declaration(float, left, right);
+
+    .inner {
+      width: $margin;
+      height: $margin;
+      background-color: black;
+    }
+
+    &.first {
+      .inner {
+        @include rtl-sass-margin($margin, 0, 0, $margin);
+      }
+    }
+
+    &.second {
+      .inner {
+        @include rtl-sass-margin($margin, $margin / 2, 0, 0);
+      }
+    }
+
+    &.third {
+      .inner {
+        @include rtl-sass-margin(0, 0, $margin, $margin);
+      }
+    }
+
+    &.fourth {
+      .inner {
+        @include rtl-sass-margin(0, $margin / 2, $margin, 0);
+      }
+    }
+  }
+}

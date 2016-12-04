@@ -1,0 +1,5 @@
+{
+  "generator-stromboli": {
+    "demo": "src/components/demo"
+  }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Padding</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div id="app">
+    <demo title="Padding" v-bind:languages="{{ languages|json_encode|escape }}">
+        <div slot="content" class="demo-content demo-padding">
+            <div class="block first">
+                <div class="inner"></div>
+            </div>
+            <div class="block second">
+                <div class="inner"></div>
+            </div>
+            <div class="block third">
+                <div class="inner"></div>
+            </div>
+            <div class="block fourth">
+                <div class="inner"></div>
+            </div>
+        </div>
+    </demo>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

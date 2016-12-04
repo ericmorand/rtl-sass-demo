@@ -1,0 +1,31 @@
+@import "../../demo/index";
+@import "../../../../node_modules/rtl-sass/src/border";
+@import "../../../../node_modules/rtl-sass/src/positioning";
+
+.demo-border-radius {
+  .block {
+    width: 200px;
+    height: 200px;
+
+    max-width: 50%;
+
+    @include rtl-sass-declaration(float, left, right);
+
+    &.first {
+      @include rtl-sass-border-radius(50%, 0, 0, 0);
+    }
+
+    &.second {
+      @include rtl-sass-border-radius(0, 100%, 0, 0);
+    }
+
+    &.third {
+      clear: both;
+      @include rtl-sass-border-radius(0, 0, 0, 0);
+    }
+
+    &.fourth {
+      @include rtl-sass-border-radius(0, 0, 10%, 0);
+    }
+  }
+}

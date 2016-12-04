@@ -1,0 +1,139 @@
+@import "index";
+@import "../../demo/index";
+@import "../../../../node_modules/rtl-sass/src/alignment";
+@import "../../../../node_modules/rtl-sass/src/border";
+@import "../../../../node_modules/rtl-sass/src/margin";
+
+.demo-grid {
+  .demo-body & {
+    .grid {
+      .widget {
+        margin: 8px;
+        height: 64px;
+        padding: 8px;
+      }
+
+      .column {
+        @include grid-col;
+        border: solid 1px #ccc;
+      }
+
+      &.grid-0 {
+        .column {
+          &.c2 {
+            @include breakpoint(min-width 1280px) {
+              width: grid-col-width() * ($gridSize / 3);
+            }
+          }
+
+          &.c4 {
+            @include breakpoint(min-width 1280px) {
+              @include rtl-sass-margin-left(grid-col-width() * ($gridSize / 4 ));
+            }
+          }
+
+          &.c5 {
+            display: none;
+          }
+        }
+
+        .widget {
+          &.w0 {
+            background-color: #7F1813;
+          }
+
+          &.w1 {
+            height: 32px;
+            background-color: #B24109;
+          }
+
+          &.w2 {
+            height: 256px;
+            background-color: #E5A17F;
+          }
+
+          &.w3 {
+            background-color: #388C3F;
+          }
+
+          &.w4 {
+            background-color: #7F1813;
+          }
+        }
+      }
+
+      &.grid-1 {
+        .column {
+          &.c0 {
+            @include breakpoint(min-width 1280px) {
+              width: grid-col-width() * 2;
+            }
+          }
+
+          &.c1 {
+            @include breakpoint(min-width 1280px) {
+              @include rtl-sass-margin-left(grid-col-width() * ($gridSize  / 2));
+            }
+          }
+
+          &.c2 {
+            display: none;
+          }
+
+          &.c3 {
+            @include breakpoint(min-width 1280px) {
+              @include rtl-sass-margin-left(grid-col-width());
+            }
+          }
+
+          &.c4 {
+            @include breakpoint(min-width 1280px) {
+              width: grid-col-width() * $gridSize;
+            }
+          }
+
+          &.c5 {
+            @include breakpoint(min-width 1280px) {
+              width: grid-col-width() * ($gridSize / 2);
+              @include rtl-sass-margin-left(grid-col-width());
+            }
+          }
+
+          &.c6 {
+            @include breakpoint(min-width 1280px) {
+              width: grid-col-width() * 2;
+            }
+          }
+        }
+
+        .widget {
+          &.w0 {
+            height: 128px;
+            background-color: #7F1813;
+          }
+
+          &.w1 {
+            height: 32px;
+            background-color: #E5A17F;
+          }
+
+          &.w3 {
+            background-color: #388C3F;
+          }
+
+          &.w4 {
+            background-color: #7F1813;
+          }
+
+          &.w5 {
+            background-color: #388C3F;
+          }
+
+          &.w6 {
+            background-color: #E5A17F;
+          }
+        }
+      }
+    }
+  }
+}

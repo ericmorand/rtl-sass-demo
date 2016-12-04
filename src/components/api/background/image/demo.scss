@@ -1,0 +1,21 @@
+@import "../../../demo/index";
+@import "../../../../../node_modules/rtl-sass/src/api";
+
+$border: solid 10px black;
+
+.demo-background-image {
+  .demo-body & {
+    .block {
+      width: 800px;
+      height: 400px;
+      max-width: 80%;
+
+      @include rtl-sass-declaration(float, left, right);
+
+      &.first {
+        background-size: cover;
+        @include rtl-sass-declaration(background-image, url("assets/city-1.jpg"), url("assets/city-2.jpg"));
+      }
+    }
+  }
+}

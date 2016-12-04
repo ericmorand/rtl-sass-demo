@@ -1,0 +1,35 @@
+@import "../demo/index";
+@import "../../../node_modules/rtl-sass/src/padding";
+
+$padding: 100px;
+
+.demo-padding {
+  .block {
+    max-width: 50%;
+    box-sizing: border-box;
+    @include rtl-sass-declaration(float, left, right);
+
+    .inner {
+      width: $padding;
+      height: $padding;
+      background-color: black;
+    }
+
+    &.first {
+      @include rtl-sass-padding($padding, 0, 0, $padding);
+    }
+
+    &.second {
+      @include rtl-sass-padding($padding, $padding / 2, 0, 0);
+    }
+
+    &.third {
+      clear: both;
+      @include rtl-sass-padding(0, 0, $padding, $padding);
+    }
+
+    &.fourth {
+      @include rtl-sass-padding(0, $padding / 2, $padding, 0);
+    }
+  }
+}

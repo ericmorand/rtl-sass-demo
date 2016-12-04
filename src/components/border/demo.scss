@@ -1,0 +1,35 @@
+@import "../demo/index";
+@import "../../../node_modules/rtl-sass/src/border";
+@import "../../../node_modules/rtl-sass/src/positioning";
+
+.demo-border {
+  .block {
+    width: 200px;
+    height: 200px;
+
+    max-width: 50%;
+    box-sizing: border-box;
+
+    @include rtl-sass-declaration(float, left, right);
+    @include rtl-sass-border-color(black);
+    @include rtl-sass-border-style(solid);
+    @include rtl-sass-border-width(5px);
+
+    &.first {
+      @include rtl-sass-border-style(dotted, none, none, dotted);
+    }
+
+    &.second {
+      @include rtl-sass-border-style(dashed, dashed, none, none);
+    }
+
+    &.third {
+      clear: both;
+      @include rtl-sass-border-style(none, none, solid, solid);
+    }
+
+    &.fourth {
+      @include rtl-sass-border-style(none, double, double, none);
+    }
+  }
+}

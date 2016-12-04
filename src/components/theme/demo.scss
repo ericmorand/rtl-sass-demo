@@ -1,0 +1,27 @@
+@import "index";
+@import "../demo/index";
+@import "../../../node_modules/rtl-sass/src/positioning";
+
+.demo-content {
+  > div {
+    margin-bottom: 20px;
+
+    &:after {
+      @include clear-float;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .font-header {
+    @include rtl-sass-float(left);
+    width: 25%;
+  }
+
+  .font-demo {
+    @include rtl-sass-float(right);
+    width: 75%;
+  }
+}

@@ -1,0 +1,19 @@
+@import "../demo/index";
+@import "../../../node_modules/rtl-sass/src/positioning";
+
+.demo-positioning {
+  .demo-body & {
+    .block {
+      width: 200px;
+      height: 200px;
+      max-width: 50%;
+
+      clear: none;
+      @include rtl-sass-float(right);
+
+      &.first {
+        @include rtl-sass-float(left);
+      }
+    }
+  }
+}

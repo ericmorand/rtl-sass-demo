@@ -1,0 +1,17 @@
+@import "../../demo/index";
+@import "../../../../node_modules/rtl-sass/src/api";
+
+$border: solid 10px black;
+
+.demo-rotate {
+  .demo-body & {
+    .block {
+      width: 200px;
+      height: 200px;
+      @include rtl-sass-declaration(transform, rotate(30deg), rotate(240deg));
+      border-right: $border;
+      border-top: $border;
+      @include rtl-sass-declaration(float, left, right);
+    }
+  }
+}
